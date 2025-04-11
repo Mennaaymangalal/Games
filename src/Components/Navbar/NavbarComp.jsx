@@ -1,5 +1,6 @@
 import React from "react";
 import logo from '../../assets/logo-sm.png'
+import './NavbarComp.css'
 import {
   Navbar,
   NavbarBrand,
@@ -43,10 +44,10 @@ export default function NavbarComp() {
     <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {
           menuItems.map((item,index)=>(
-            <NavbarItem key={index}>
+            <NavbarItem className=" hover:text-[#09c] transition-all" key={index}>
             <NavLink
              to={item == "mmorpg" ? "/" : "/" + item.toLocaleLowerCase()}
-             color="foreground" href="#">
+             color="foreground" >
              {
               item
              }
@@ -60,9 +61,8 @@ export default function NavbarComp() {
       {menuItems.map((item, index) => (
         <NavbarMenuItem key={`${item}-${index}`}>
           <NavLink to={item == "mmorpg" ? "/" : "/" + item.toLocaleLowerCase()}
-            className="w-full block"
-            color={"foreground" }
-            href="#"
+            className="w-full block hover:text-[#09c]  transition-all"
+            color={"foreground" }            
             size="lg"
           >
             {item}
