@@ -10,7 +10,7 @@ export default function MainLayout() {
      <img src={img} className='w-full h-44'/>
     </div>
       <NavbarComp/>
-      <div className="container">
+      <div className="">
         <Outlet/>
       </div>
     </>
