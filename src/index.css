@@ -6,4 +6,7 @@
   .container{
       @apply md:py-4 px-5 mx-auto;
   }
+  body{
+    font-family: "Nerko One", cursive;
+  }
 }

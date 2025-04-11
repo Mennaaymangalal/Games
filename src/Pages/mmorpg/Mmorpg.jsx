@@ -27,7 +27,7 @@ export default function Mmorpg() {
       <div className=" w-full flex justify-center items-center min-h-screen mt-8 xl:mt-14-0 px-2 sm:px-6 lg:px-16">
       <div className="w-full mx-auto">
         {/* Grid layout */}
-        <div className="grid gap-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
+        <div className="grid gap-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 
           {/* CARD 1 */}
       {
@@ -50,8 +50,8 @@ export default function Mmorpg() {
                   <button className='bg-[#3A497B] py-1 px-2 text-sm rounded-lg font-semibold'>Free</button>
                   </div>
                 </div>
-               <div className="h-28 ">
-               <p className="mt-3 text-sm text-center md:text-lg text-gray-400 line-clamp-3">
+               <div className="h-24 ">
+               <p className="mt-3 text-sm text-center  text-gray-400 line-clamp-3">
                  {game.short_description}
                 </p>
                </div>

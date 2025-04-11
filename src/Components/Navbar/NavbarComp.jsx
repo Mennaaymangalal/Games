@@ -26,8 +26,8 @@ export default function NavbarComp() {
   ];
 
   return ( 
-       <div className="mx-4 lg:mx-32 sticky top-0 z-40">
-     <Navbar  onMenuOpenChange={setIsMenuOpen} className=" bg-[#3A497B] rounded-2xl shadow-lg">
+       <div className="mx-4 lg:mx-36 p-0 sticky top-0 z-10">
+     <Navbar   isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} className=" bg-[#3A497B] rounded-2xl shadow-lg">
     <NavbarContent>
       <NavbarMenuToggle 
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -42,7 +42,7 @@ export default function NavbarComp() {
     <NavbarContent className="hidden md:flex gap-4" justify="center">
         {
           menuItems.map((item,index)=>(
-            <NavbarItem className=" hover:text-[#09c] transition-all" key={index}>
+            <NavbarItem className="uppercase text-tiny  hover:text-[#09c] transition-all" key={index}>
             <NavLink
              to={item == "mmorpg" ? "/" : "/" + item.toLocaleLowerCase()}
              color="foreground" >
@@ -57,9 +57,9 @@ export default function NavbarComp() {
 
     <NavbarMenu >
       {menuItems.map((item, index) => (
-        <NavbarMenuItem key={`${item}-${index}`}>
+        <NavbarMenuItem onClick={()=> setIsMenuOpen(false)}  key={`${item}-${index}`}>
           <NavLink to={item == "mmorpg" ? "/" : "/" + item.toLocaleLowerCase()}
-            className="w-full block hover:text-[#09c]  transition-all"
+            className="uppercase text-medium w-full block hover:text-[#09c]  transition-all"
             color={"foreground" }            
             size="lg"
           >
