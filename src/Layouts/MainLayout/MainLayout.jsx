@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from '../../Components/Navbar/Navbar'
 import { Outlet } from 'react-router-dom'
 import img from '../../assets/wraper.png'
+import NavbarComp from '../../Components/Navbar/NavbarComp'
 
 export default function MainLayout() {
   return (
@@ -9,7 +9,7 @@ export default function MainLayout() {
     <div className="">
      <img src={img} className='w-full h-44'/>
     </div>
-      <Navbar/>
+      <NavbarComp/>
       <div className="container">
         <Outlet/>
       </div>
